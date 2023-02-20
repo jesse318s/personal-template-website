@@ -33,10 +33,6 @@
         padding: 0;
       }
 
-      main {
-        overflow-x: hidden;
-      }
-
       .text_shadow {
         text-shadow: 3px 3px 3px black;
       }
@@ -80,11 +76,7 @@
           <>
             <header id="home">
               {/* Navbar */}
-              <nav
-                className={
-                  "navbar navbar-expand-lg navbar-dark bg-dark fixed-top overflow-hidden"
-                }
-              >
+              <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top overflow-hidden">
                 {/* Container wrapper */}
                 <div className="container-fluid">
                   {/* Toggle button */}
@@ -106,7 +98,7 @@
                   >
                     {/* Navbar brand */}
                     <a className="navbar-brand" href="">
-                      <h1 className="navbar_title text_shadow">LI</h1>
+                      <h1 className="text_shadow">LI</h1>
                     </a>
                     {/* Left links */}
                     <ul className="navbar-nav me-auto font-weight-bold">
@@ -141,7 +133,7 @@
                   {/* Collapsible wrapper */}
                   {/* Right elements */}
                   <div className="d-flex align-items-center text-center">
-                    <a className={"btn btn-light me-4"} href="">
+                    <a className="btn btn-light me-4" href="">
                       <div className="font-weight-bold">My Resume</div>
                     </a>
                   </div>
@@ -152,25 +144,23 @@
               {/* Navbar */}
             </header>
 
-            <main className={"bg-dark text-light"}>
+            <main className="bg-dark text-light">
               {/* background image */}
               <section
                 style={{
                   background: `url('https://images.pexels.com/photos/1044990/pexels-photo-1044990.jpeg')`,
                   backgroundSize: "cover",
                   height: "100vh",
-                  width: "100vw",
+                  width: "99vw",
                 }}
               >
                 {/* down button */}
                 <div className="d-flex justify-content-center">
                   <a
                     href="#skills"
-                    className={
-                      "btn btn-dark btn-rounded btn-outline-* btn-lg blink"
-                    }
+                    className="btn btn-dark btn-rounded btn-outline-* btn-lg blink"
                   >
-                    <h2 className={"text_shadow"}>Skills</h2>
+                    <h2 className="text_shadow">Skills</h2>
                     <i className="fas fa-angle-down fa-2x" />
                   </a>
                 </div>
@@ -178,7 +168,7 @@
 
               <div id="skills" />
               <section className="row text-center mt-5 mx-5">
-                <h2 className={"mb-4 text_shadow"}>My Skills</h2>
+                <h2 className="mb-4 text_shadow">My Skills</h2>
                 <div className="col-6">
                   <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
                   <div className="progress bg-black">
@@ -318,7 +308,7 @@
 
               <div id="projects" />
               <section className="text-center mb-5">
-                <h2 className={"mb-5 text_shadow"}>My Projects</h2>
+                <h2 className="mb-5 text_shadow">My Projects</h2>
                 {/* projects accordion */}
                 <div className="accordion mx-2" id="projectsAccordion">
                   {/* accordion option */}
@@ -417,7 +407,7 @@
 
               <div id="about" />
               <section className="text-center">
-                <h2 className={"mb-5 text_shadow"}>About Me</h2>
+                <h2 className="mb-5 text_shadow">About Me</h2>
                 <div className="row mx-5">
                   <div className="col-12">
                     <p className="lead">Lorem ipsum dolor sit amet</p>
@@ -433,8 +423,8 @@
               </section>
 
               <div id="contact" />
-              <section className="text-center mb-5">
-                <h2 className="my-5">Contact Me</h2>
+              <section className="text-center">
+                <h2 className="mb-5">Contact Me</h2>
                 <p className="mb-5 mx-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -448,14 +438,14 @@
                   </li>
                   <li>
                     <i className="fas fa-phone fa-2x" />
-                    <p>+1 123-456-7890</p>
+                    <p className="mb-0">+1 123-456-7890</p>
                   </li>
                 </ul>
               </section>
             </main>
 
-            <footer className="text-dark">
-              <div className={"bg-dark bg-gradient text-center text-light p-3"}>
+            <footer>
+              <div className="bg-dark bg-gradient text-center text-light p-3">
                 © 2023 Copyright:
               </div>
             </footer>

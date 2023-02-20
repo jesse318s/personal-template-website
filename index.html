@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="icon"
+      href="https://icons-for-free.com/iconfiles/ico/48/design+development+facebook+framework+mobile+react+icon-1320165723839064798.ico"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Lorem ipsum dolor sit amet" />
+    <title>Lorem ipsum</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        overflow-x: hidden;
+      }
+
+      .text_shadow {
+        text-shadow: 3px 3px 3px black;
+      }
+
+      /* animation */
+      .blink {
+        position: absolute;
+        bottom: 50%;
+        animation: blinker 2s linear infinite;
+      }
+
+      @keyframes blinker {
+        50% {
+          opacity: 50%;
+        }
+      }
+    </style>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
+    ></script>
+    <!-- React -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function App() {
+        return (
+          <>
+            <header id="home">
+              {/* Navbar */}
+              <nav
+                className={
+                  "navbar navbar-expand-lg navbar-dark bg-dark fixed-top overflow-hidden"
+                }
+              >
+                {/* Container wrapper */}
+                <div className="container-fluid">
+                  {/* Toggle button */}
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <i className="fas fa-bars" />
+                  </button>
+                  {/* Collapsible wrapper */}
+                  <div
+                    className="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                  >
+                    {/* Navbar brand */}
+                    <a className="navbar-brand" href="">
+                      <h1 className="navbar_title text_shadow">LI</h1>
+                    </a>
+                    {/* Left links */}
+                    <ul className="navbar-nav me-auto font-weight-bold">
+                      <li className="nav-item">
+                        <a className="nav-link" href="#home">
+                          Home
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#skills">
+                          Skills
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#projects">
+                          Projects
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#about">
+                          About
+                        </a>
+                      </li>
+                      <li className="nav-item">
+                        <a className="nav-link" href="#contact">
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                    {/* Left links */}
+                  </div>
+                  {/* Collapsible wrapper */}
+                  {/* Right elements */}
+                  <div className="d-flex align-items-center text-center">
+                    <a className={"btn btn-light me-4"} href="">
+                      <div className="font-weight-bold">My Resume</div>
+                    </a>
+                  </div>
+                  {/* Right elements */}
+                </div>
+                {/* Container wrapper */}
+              </nav>
+              {/* Navbar */}
+            </header>
+
+            <main className={"bg-dark text-light"}>
+              {/* background image */}
+              <section
+                style={{
+                  background: `url('https://images.pexels.com/photos/1044990/pexels-photo-1044990.jpeg')`,
+                  backgroundSize: "cover",
+                  height: "100vh",
+                  width: "100vw",
+                }}
+              >
+                {/* down button */}
+                <div className="d-flex justify-content-center">
+                  <a
+                    href="#skills"
+                    className={
+                      "btn btn-dark btn-rounded btn-outline-* btn-lg blink"
+                    }
+                  >
+                    <h2 className={"text_shadow"}>Skills</h2>
+                    <i className="fas fa-angle-down fa-2x" />
+                  </a>
+                </div>
+              </section>
+
+              <div id="skills" />
+              <section className="row text-center mt-5 mx-5">
+                <h2 className={"mb-4 text_shadow"}>My Skills</h2>
+                <div className="col-6">
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "100%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">100%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "98%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">98%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "95%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">95%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "95%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">95%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "98%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">98%</p>
+                </div>
+                <div className="col-6">
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "95%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">95%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "95%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">95%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "95%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">95%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "90%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">90%</p>
+                  <p className="font-weight-bold pt-4 mb-2">Lorem ipsum</p>
+                  <div className="progress bg-black">
+                    <div
+                      className="progress-bar bg-success"
+                      role="progressbar"
+                      style={{ width: "90%" }}
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      aria-label="progressbar"
+                    />
+                  </div>
+                  <p className="mt-2">90%</p>
+                </div>
+                <hr className="my-5" />
+              </section>
+
+              <div id="projects" />
+              <section className="text-center mb-5">
+                <h2 className={"mb-5 text_shadow"}>My Projects</h2>
+                {/* projects accordion */}
+                <div className="accordion mx-2" id="projectsAccordion">
+                  {/* accordion option */}
+                  <div className="accordion-item">
+                    {/* accordion option closed */}
+                    <h2 className="accordion-header" id="headingOne">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      >
+                        <h2>Lorem ipsum</h2>
+                      </button>
+                    </h2>
+                    {/* accordion option open */}
+                    <div
+                      id="collapseOne"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-mdb-parent="#projectsAccordion"
+                    >
+                      <div className="accordion-body text-dark">
+                        <p>Lorem ipsum</p>
+                        <strong>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                  {/* accordion option */}
+                  <div className="accordion-item">
+                    {/* accordion option closed */}
+                    <h2 className="accordion-header" id="headingTwo">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <h2>Lorem ipsum</h2>
+                      </button>
+                    </h2>
+                    {/* accordion option open */}
+                    <div
+                      id="collapseTwo"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-mdb-parent="#projectsAccordion"
+                    >
+                      <div className="accordion-body text-dark">
+                        <p>Lorem ipsum</p>
+                        <strong>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                  {/* accordion option */}
+                  <div className="accordion-item">
+                    {/* accordion option closed */}
+                    <h2 className="accordion-header" id="headingThree">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-mdb-toggle="collapse"
+                        data-mdb-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <h2>Lorem ipsum</h2>
+                      </button>
+                    </h2>
+                    {/* accordion option open */}
+                    <div
+                      id="collapseThree"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-mdb-parent="#projectsAccordion"
+                    >
+                      <div className="accordion-body text-dark">
+                        <p>Lorem ipsum</p>
+                        <strong>
+                          <p>Lorem ipsum dolor sit amet</p>
+                        </strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr className="my-5 mx-5" />
+              </section>
+
+              <div id="about" />
+              <section className="text-center">
+                <h2 className={"mb-5 text_shadow"}>About Me</h2>
+                <div className="row mx-5">
+                  <div className="col-12">
+                    <p className="lead">Lorem ipsum dolor sit amet</p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                  <hr className="my-5" />
+                </div>
+              </section>
+
+              <div id="contact" />
+              <section className="text-center mb-5">
+                <h2 className="my-5">Contact Me</h2>
+                <p className="mb-5 mx-5">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <ul className="list-unstyled mb-0">
+                  <li>
+                    <i className="fas fa-envelope fa-2x" />
+                    <p>abc123@gmail.com</p>
+                  </li>
+                  <li>
+                    <i className="fas fa-phone fa-2x" />
+                    <p>+1 123-456-7890</p>
+                  </li>
+                </ul>
+              </section>
+            </main>
+
+            <footer className="text-dark">
+              <div className={"bg-dark bg-gradient text-center text-light p-3"}>
+                © 2023 Copyright:
+              </div>
+            </footer>
+          </>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
